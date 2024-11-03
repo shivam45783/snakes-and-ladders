@@ -9,4 +9,3 @@ def run():
 ###### 4.) You can choose color opf your choice\n
 ###### 5.) If both the players coincide at the same position, it will be represeted in violet \n
 """)
-run()

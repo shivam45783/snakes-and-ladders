@@ -4,6 +4,7 @@ import Home
 import snake_and_ladder
 import About_us
 import resources_refered
+import rules
 
 #setting page configuration 
 st.set_page_config(
@@ -27,7 +28,7 @@ class MultiApp:
             #creating option menu in the side bar
             app=option_menu(
                 menu_title='Project',
-                options=['🏡Home','🐍Game','❓About Us❔','🛜Resources Used/Refered'],
+                options=['🏡Home','🐍Game','❓About Us❔','🛜Resources Used/Refered',"Rule Book 🧾"],
                 icons=['h', 'g','h','j'],
                 default_index=0
             )
@@ -40,5 +41,7 @@ class MultiApp:
             About_us.run()
         if app == '🛜Resources Used/Refered':
             resources_refered.run()
+        if app == "Rule Book 🧾":
+            rules.run()
         
     run()

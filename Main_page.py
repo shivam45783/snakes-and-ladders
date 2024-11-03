@@ -28,8 +28,8 @@ class MultiApp:
             #creating option menu in the side bar
             app=option_menu(
                 menu_title='Project',
-                options=['🏡Home','🐍Game','❓About Us❔','🛜Resources Used/Refered',"Rule Book 🧾"],
-                icons=['h', 'g','h','j'],
+                options=['🏡Home','🐍Game','❓About Us❔','🛜Resources Used/Refered',"🧾Rule Book "],
+                icons=['h', 'g','h','j','a'],
                 default_index=0
             )
         if app=='🏡Home':
@@ -41,7 +41,7 @@ class MultiApp:
             About_us.run()
         if app == '🛜Resources Used/Refered':
             resources_refered.run()
-        if app == "Rule Book 🧾":
+        if app == "🧾Rule Book ":
             rules.run()
         
     run()

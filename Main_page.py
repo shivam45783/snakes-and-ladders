@@ -40,4 +40,5 @@ class MultiApp:
             About_us.run()
         if app == '🛜Resources Used/Refered':
             resources_refered.run()
+        
     run()

@@ -10,8 +10,8 @@ def run():
     """)
     # taking input of names and colours from user
     c1, c2 = st.columns(2)
-    p1 = c1.text_input('Player 1 Name:', 'Type name here..')
-    p2 = c2.text_input('Player 2 Name', 'Type name here..')
+    p1 = c1.text_input('Player 1 Name:', placeholder='Type name here..')
+    p2 = c2.text_input('Player 2 Name', placeholder='Type name here..')
     clr1 = c1.selectbox("Select Player 1's color", ['red', 'blue', 'green', 'orange','grey','violet'])
     clr2 = c2.selectbox("Select Player 2's color", ['blue', 'red', 'green', 'orange','grey','violet'])
     

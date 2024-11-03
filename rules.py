@@ -6,6 +6,6 @@ def run():
 ###### 1.) It is a 1V1 Player Game\n
 ###### 2.) Green lines represent ladders\n
 ###### 3.) Red lines represent snakes\n
-###### 4.) You can choose color opf your choice\n
+###### 4.) You can choose color op your choice\n
 ###### 5.) If both the players coincide at the same position, it will be represeted in violet \n
 """)

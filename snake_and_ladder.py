@@ -210,7 +210,7 @@ def run():
                 st.markdown(f"""
         ### :{clr2}[{p2}'s Move]""")
         
-        #plotting bar graph in column d2
+        #plotting board in column d2
         with d2:
             st.pyplot(draw_board(st.session_state.player1_position, st.session_state.player2_position))
         

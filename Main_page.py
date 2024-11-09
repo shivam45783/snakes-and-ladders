@@ -5,6 +5,7 @@ import snake_and_ladder
 import About_us
 import resources_refered
 import rules
+import snake_and_ladder_computer
 
 #setting page configuration 
 st.set_page_config(
@@ -27,8 +28,16 @@ def run():
     if app=='🏡Home':
         Home.run()
     if app=='🐍Game':
-        # snake_ladder.run()
-        snake_and_ladder.run()
+       
+        ap = option_menu(
+            menu_title="Game Mode",
+            options = ["Player🧍‍♂️ vs Player🧍‍♂️", "Player🧍‍♂️ vs Computer"],
+            default_index=0
+        )
+        if ap == "Player🧍‍♂️ vs Player🧍‍♂️":
+            snake_and_ladder.run()
+        if ap  == "Player🧍‍♂️ vs Computer":
+            snake_and_ladder_computer.run()       
     if app=='❓About Us❔':
         About_us.run()
     if app == '🛜Resources Used/Refered':

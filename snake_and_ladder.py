@@ -141,7 +141,7 @@ def run():
             #inside col3
             with col3:
                 #same logic as above for player 2
-                st.markdown(f"#### :{clr2}[{p2}]")
+                st.write(f"#### :{clr2}[{p2}]")
                 
                 button2 = st.button(f"{p2}'s "" Move")
                 

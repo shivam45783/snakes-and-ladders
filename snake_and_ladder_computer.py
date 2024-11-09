@@ -13,6 +13,7 @@ def run():
     c1, c2 = st.columns(2)
     p1 = c1.text_input('Player 1 Name:', placeholder='Type name here..')
     clr1 = c1.selectbox("Select Player 1's color", ['blue', 'green', 'orange','grey','violet'])
+    clr2 = 'red'
     if p1:
         d1, d2 = st.columns(2)
         if "player1_position" not in st.session_state:
@@ -82,7 +83,7 @@ def run():
             col1, col2, col3, col4 = st.columns(4)
             
             with col2:
-                st.markdown(f"#### :{clr1} [{p1}]")
+                st.write(f"#### :{clr1}[{p1}]")
                 button1 = st.button(f"{p1}'s Move")
                 if button1 and st.session_state.turn == 1:
                     roll = random.randint(1, 6)
@@ -115,7 +116,7 @@ def run():
 
             with col3:
                 time.sleep(2)
-                st.markdown(f"#### :red [Computer]")
+                st.write(f"#### :{clr2}[Computer]")
                 
                 if st.session_state.turn == 2:
                     roll = random.randint(1, 6)

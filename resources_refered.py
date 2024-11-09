@@ -15,6 +15,7 @@ def run():
     Help from Internet 
     """
     )
-    st.write("(1). For creating MultiApp class on the main page")
-    st.write("(2). Used ChatGPT to check errors in our code if any")
-    st.write("(3). For drawing snakes and ladders")
+    st.write("(1). Used ChatGPT to check errors in our code if any")
+    st.write("(2). For drawing snakes and ladders")
+    st.write("(3). For chaning background color of home page")
+    

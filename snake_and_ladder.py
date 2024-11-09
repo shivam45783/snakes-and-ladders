@@ -96,6 +96,17 @@ def run():
             #inside col2
             with col2:
                 st.write(f"#### :{clr1}[{p1}]")
+                #Creating a empty space for adding photo of our choice
+                placeholder1=st.empty()
+                default_image = Image.open("def.jpeg")
+                placeholder1.image(default_image, use_column_width=True)
+                uploaded_file = st.file_uploader("select the image for player 1")
+                
+                if uploaded_file is not None:
+                    image = Image.open(uploaded_file)
+                    placeholder1.image(image, use_column_width=True)
+                else:
+                    placeholder1.image(default_image, use_column_width=True)
                 
                 #creating button for player1's move
                 button1 = st.button(f"{p1}'s Move")
@@ -134,6 +145,7 @@ def run():
                     if st.session_state.player1_position == 100:
                         st.balloons()
                         st.write(f"🎉 Congratulations! {p1} wins!")
+                        st.session_state.turn = None
                     elif move_player(st.session_state.player1_position,roll) == st.session_state.player1_position:
                         st.write("Roll Exceeded 🙂!! Try Again")
                     
@@ -167,7 +179,7 @@ def run():
                     if st.session_state.player2_position == 100:
                         st.balloons()
                         st.write(f"🎉 Congratulations! {p2} wins!")
-
+                        st.session_state.turn = None
                     elif move_player(st.session_state.player2_position,roll) == st.session_state.player2_position:
                         st.write("Roll Exceeded 🙂!! Try Again")
     
@@ -214,5 +226,5 @@ def run():
         with d2:
             st.pyplot(draw_board(st.session_state.player1_position, st.session_state.player2_position))
         
-#Run
-run()
+
+

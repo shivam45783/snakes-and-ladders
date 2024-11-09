@@ -32,7 +32,8 @@ def run():
         ap = option_menu(
             menu_title="Game Mode",
             options = ["Player🧍‍♂️ vs Player🧍‍♂️", "Player🧍‍♂️ vs Computer"],
-            default_index=0
+            default_index=0,
+            orientation='horizontal'
         )
         if ap == "Player🧍‍♂️ vs Player🧍‍♂️":
             snake_and_ladder.run()

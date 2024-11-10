@@ -47,10 +47,7 @@ def run():
                         color = 'white'
                     ax.text(col + 0.5, 9 - row + 0.5, str(cell_num), va='center', ha='center',
                             bbox=dict(facecolor=color, edgecolor='black', boxstyle='round,pad=1'), fontsize=15)
-                    # ax.plot([col, col + 1], [9 - row, 9 - row], color='black')
-                    # ax.plot([col, col + 1], [10 - row, 10 - row], color='black')
-                    # ax.plot([col, col], [9 - row, 10 - row], color='black')
-                    # ax.plot([col + 1, col + 1], [9 - row, 10 - row], color='black')
+                    
                     for i in range(11):
                         ax.axhline(i,color='black')
                         ax.axvline(i,color='black')
@@ -70,8 +67,7 @@ def run():
             ax.set_xlim(0, 10)
             ax.set_ylim(0, 10)
             return fig
-        # def change_coordinate(n):
-        #     org_pos = (9 - n%10) * 10 + int(str(n)[-1]) + 1 if (n%10) % 2 == 0 else (9 - ) * 10 + (9 - col) + 1
+        
             
         def move_player(position, roll):
             if position + roll <= 100:
@@ -113,9 +109,7 @@ def run():
                         time.sleep(3)
                     elif move_player(st.session_state.player1_position,roll) == st.session_state.player1_position:
                         st.write("Roll Exceeded 🙂!! Try Again")
-                # with c2:
-                #     placeholder1 = st.empty
-                #     placeholder1.pyplot(draw_board(st.session_state.player1_position,st.session_state.computer_position))
+                
 
                 
 
@@ -148,14 +142,7 @@ def run():
                         st.write("Roll Exceeded 🙂!! Try Again")
                 # with c2:
                 #     placeholder1.pyplot(draw_board(st.session_state.player1_position,st.session_state.computer_position))
-        # st.write(""" 
-        # # First Player Move -> """,a)
-        # st.write("""
-        # # First Player Position -> """, st.session_state.player1_position)
-        # st.write("""
-        # # Second Player Move -> """,b)
-        # st.write("""
-        # # Second Player Position""", st.session_state.player2_position)  
+       
         
         st.markdown(f""" 
         # :{clr1}[{p1}'s Move ->] {a}""")

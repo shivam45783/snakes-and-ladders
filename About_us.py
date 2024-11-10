@@ -9,6 +9,6 @@ def run():
 3. Ajinkya Temburne (2404238): Code for Player Vs Computer Mode
 4. Tanuja Potnuru (2404229): Attended all meetings seriously and Debugging and created resourses_refered.py
 5. Dasarapalli Paul Nikesh (2403114): Attended all meetings seriously,Debugging,Editting and created rules.py
-6. Avani Jain (2406309): Attended all meetings seriously,Debugging and created About_us.py
+6. Avani Jain (2406309): Attended all meetings seriously,Debugging and created About_us.py\n
 -> Members: 3,4,5,6 have equale contribution in project
 """)

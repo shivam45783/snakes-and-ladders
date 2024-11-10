@@ -32,7 +32,7 @@ def run():
         a = 0   
         b = 0
     
-        def draw_board(player1_position, computer_position):
+        def draw__board(player1_position, computer_position):
             fig, ax = plt.subplots(figsize=(14,14))
             for row in range(10):
                 for col in range(10):
@@ -140,9 +140,7 @@ def run():
                         time.sleep(2)
                     elif move_player(st.session_state.computer_position,roll) == st.session_state.computer_position:
                         st.write("Roll Exceeded 🙂!! Try Again")
-                # with c2:
-                #     placeholder1.pyplot(draw_board(st.session_state.player1_position,st.session_state.computer_position))
-       
+                
         
         st.markdown(f""" 
         # :{clr1}[{p1}'s Move ->] {a}""")
@@ -170,4 +168,4 @@ def run():
                 st.markdown(f"""
             ####:red [Computer's Move]""")
         with c2:
-            st.pyplot(draw_board(st.session_state.player1_position, st.session_state.computer_position))
+            st.pyplot(draw__board(st.session_state.player1_position, st.session_state.computer_position))

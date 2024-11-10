@@ -60,13 +60,13 @@ def run():
                 ax.axhline(i,color='black')
                 ax.axvline(i,color='black')
             
-            #Drawing snakes
+            #Drawing snakes(REFERED FROM INTERNET/AI)
             for start, end in snakes.items():
                 start_x, start_y = (start - 1) % 10, 9 - (start - 1) // 10
                 end_x, end_y = (end - 1) % 10, 9 - (end - 1) // 10
                 ax.plot([start_x + 0.5, end_x + 0.5], [start_y + 0.5, end_y + 0.5], 'r', linewidth=20, alpha=0.4)
             
-            #Drawing ladders
+            #Drawing ladders(REFERED FROM INTERNET/AI)
             for start, end in ladders.items():
                 start_x, start_y = (start - 1) % 10, 9 - (start - 1) // 10
                 end_x, end_y = (end - 1) % 10, 9 - (end - 1) // 10

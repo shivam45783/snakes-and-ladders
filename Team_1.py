@@ -66,6 +66,7 @@ def run():
     st.write("""
 # 𝓣𝓮𝓪𝓶 1 𝓟𝓻𝓸𝓳𝓮𝓬𝓽
 """)
+    #Writing HTML Code for background color(REFERED FROM INTERNET)
     st.markdown(
         """
         <style>
@@ -129,7 +130,7 @@ def run():
     st.write("""    
     # Player vs Computer Snakes and Ladder Game🐍🪜🎲
     """)
-    x = 9
+
     # taking input of names and colours from user
     c1, c2 = st.columns(2)
     p1 = c1.text_input('Player 1 Name: ', placeholder='Type name here..')

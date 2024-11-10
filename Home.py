@@ -6,6 +6,7 @@ def run():
     st.write("""
 # 𝓣𝓮𝓪𝓶 1 𝓟𝓻𝓸𝓳𝓮𝓬𝓽
 """)
+    #Writing HTML Code for background color(REFERED FROM INTERNET)
     st.markdown(
         """
         <style>

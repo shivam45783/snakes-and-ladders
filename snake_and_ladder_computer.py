@@ -12,7 +12,7 @@ def run():
     x = 9
     
     c1, c2 = st.columns(2)
-    p1 = c1.text_input('Player 1 Name:', placeholder='Type name here..')
+    p1 = c1.text_input('Player 1 Name: ', placeholder='Type name here..')
     clr1 = c1.selectbox("Select Player 1's color", ['blue', 'green', 'orange','grey','violet'])
     clr2 = 'red'
     if p1:

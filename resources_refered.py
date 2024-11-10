@@ -17,5 +17,5 @@ def run():
     )
     st.write("(1). Used ChatGPT to check errors in our code if any")
     st.write("(2). For drawing snakes and ladders")
-    st.write("(3). For chaning background color of home page")
+    st.write("(3). For changing background color of home page")
     

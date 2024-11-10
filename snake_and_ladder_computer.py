@@ -17,8 +17,8 @@ def run():
     clr2 = 'red'
     if p1:
         d1, d2 = st.columns(2)
-        if "player1_position" not in st.session_state:
-            st.session_state.player1_position = 0
+        if "player1__position" not in st.session_state:
+            st.session_state.player1__position = 0
         if "computer_position" not in st.session_state:
             st.session_state.computer_position = 0
         if "turn" not in st.session_state:
@@ -32,14 +32,14 @@ def run():
         a = 0   
         b = 0
     
-        def draw__board(player1_position, computer_position):
+        def draw_board(player1__position, computer_position):
             fig, ax = plt.subplots(figsize=(14,14))
             for row in range(10):
                 for col in range(10):
                     cell_num = (9 - row) * 10 + col + 1 if row % 2 == 0 else (9 - row) * 10 + (9 - col) + 1
-                    if cell_num == player1_position and cell_num == computer_position:
+                    if cell_num == player1__position and cell_num == computer_position:
                         color = 'purple'  
-                    elif cell_num == player1_position:
+                    elif cell_num == player1__position:
                         color = clr1
                     elif cell_num == computer_position:
                         color = 'red'
@@ -100,14 +100,14 @@ def run():
                             placeholder.image(img)
                             time.sleep(0.1)
                     placeholder.image(f'face_{roll}.jpg')    
-                    st.session_state.player1_position = move_player(st.session_state.player1_position, roll)
+                    st.session_state.player1__position = move_player(st.session_state.player1__position, roll)
                     st.session_state.turn = 2
-                    if st.session_state.player1_position == 100:
+                    if st.session_state.player1__position == 100:
                         st.balloons()
                         st.write(f"🎉 Congratulations! {p1} wins!")
                         st.session_state.turn = None
                         time.sleep(3)
-                    elif move_player(st.session_state.player1_position,roll) == st.session_state.player1_position:
+                    elif move_player(st.session_state.player1__position,roll) == st.session_state.player1__position:
                         st.write("Roll Exceeded 🙂!! Try Again")
                 
 
@@ -145,14 +145,14 @@ def run():
         st.markdown(f""" 
         # :{clr1}[{p1}'s Move ->] {a}""")
         st.markdown(f"""
-        # :{clr1}[{p1}'s Position ->]  {st.session_state.player1_position}""")
+        # :{clr1}[{p1}'s Position ->]  {st.session_state.player1__position}""")
         st.markdown(f"""
         # :red[Computer's  Move ->] {b}""")
         st.markdown(f"""
         # :red[Computer's Position ->] {st.session_state.computer_position}""")
 
         fig, ax = plt.subplots()
-        positions = [st.session_state.player1_position, st.session_state.computer_position]
+        positions = [st.session_state.player1__position, st.session_state.computer_position]
         ax.bar([f'{p1}', f'computer'], positions, color=[clr1, "red"])
         ax.set_title("Current Positions")
         st.pyplot(fig)
@@ -168,4 +168,4 @@ def run():
                 st.markdown(f"""
             ####:red [Computer's Move]""")
         with c2:
-            st.pyplot(draw__board(st.session_state.player1_position, st.session_state.computer_position))
+            st.pyplot(draw_board(st.session_state.player1__position, st.session_state.computer_position))

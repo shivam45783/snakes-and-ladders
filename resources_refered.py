@@ -8,7 +8,7 @@ def run():
     ### 3.MatPlotLib📊
     ### 4.Time⌚
     ### 5.StreamLit Option Menu🎨
-    ### 6. PIL🖼️
+    ### 6.PIL🖼️
     """
     )
     st.write(
